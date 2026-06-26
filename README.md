@@ -1,5 +1,7 @@
 TALLER GRUPAL – POO Principios SOLID
+
 INTEGRANTES: Devin Chamba, Daniela Jaya, Renata Reyes
+
 Análisis del Problema
 
 1.	¿Qué problemas puede ocasionar un sistema altamente acoplado? 
@@ -11,6 +13,7 @@ En general hace que el mantenimiento, la reutilizacion de código y la implement
 
 
 2.	¿Qué ventajas ofrece SOLID?
+   
 -	Nos permiten reutilizar la mayor cantidad de código posible 
 -	Hacen que nuestro código sea mas organizado y facil de entender 
 -	Hacen que las clases dejen de depender tanto entre sí
@@ -18,6 +21,7 @@ En general hace que el mantenimiento, la reutilizacion de código y la implement
 -	Permiten agregar nuevas funcionalidades sin modificar código existente.
 
 3.	¿Qué principio consideran más importante y por qué?
+   
 Creemos que el Principio Abierto/Cerrado (OCP) es uno de los más importantes porque permite agregar nuevas funcionalidades sin modificar el código existente. Esto hace que sea menos probable errores en partes del sistema que ya funcionan correctamente. Además, facilita la evolución del software y hace que sea más sencillo adaptarlo a nuevos requerimientos sin afectar su estabilidad.
 Diseño UML
  <img width="921" height="500" alt="image" src="https://github.com/user-attachments/assets/6da94bbf-04f5-4c4c-975c-374945c65f05" />
@@ -25,6 +29,7 @@ Diseño UML
 Implementación en Java Desarrollar el sistema.
 
 EXPLICACIÓN- DEFENSA DEL CÓDIGO
+
 En nuestro programa la clase principal Main dirige e instancia a los participantes tomando en cuenta los principios SOLID y los pilares de la POO como la herencia, el polimorfismo y el encapsulamiento. En primer lugar, la Herencia se evidencia cuando las clases Jugador, Entrenador y Arbitro extienden de la clase padre participante, heredando sus atributos (nombre, nacionalidad, id) y permitiendo la reutilización de código. 
 El Encapsulamiento protege estos datos ya que son declarados como private o protected y se usan métodos de acceso públicos (getters y settesr) para evitar modificaciones directas.
  Por otra parte tenemos las Interfaces (Notificacion, Reporte y Persistencia) que actúan como contratos que obligan a las clases WhatsApp, Correo, ReportePDF, ReporteExcel, BaseDatos y Archivo a implementar comportamientos específicos, aquí es donde se evidencia el Polimorfismo donde, por ejemplo, el método abstracto realizarActividad() ejecuta una lógica distinta según el objeto que lo invoque (entrenar disparos, planificar estrategias o supervisar reglas). 
